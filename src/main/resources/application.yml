@@ -1,7 +1,12 @@
+#
+#logging:
+#  level:
+#    org.springframework.security: DEBUG
+
 
 spring :
   datasource :
-    url : jdbc:mysql://10.10.10.11/siu
+    url : jdbc:mysql://10.10.10.12/sss
     username : jwj
     password : qwer1234
     driver-class-name : com.mysql.cj.jdbc.Driver

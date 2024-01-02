@@ -1,27 +1,27 @@
 package com.example.demo.product.model;
 
-import com.example.demo.orders.model.Orders;
-import lombok.*;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.List;
 
 @Entity
-@Getter
+@Data
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@Setter
-@Builder
 public class Product {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Integer idx;
+    private Integer id;
 
-    Integer price;
-    String name;
+    @Column(nullable = false, length = 30)
+    private String name;
 
-    @OneToMany(mappedBy = "product")
-    private List<Orders> orders = new ArrayList<>();
-
+    @Column(nullable = false, length = 50)
+    private Integer price;
 }

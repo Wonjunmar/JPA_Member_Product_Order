@@ -1,15 +1,20 @@
 package com.example.demo.product.model;
 
+
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
-@Builder
+import javax.persistence.*;
+
 @Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class ProductDto {
-    Integer idx;
-    Integer price;
-    String name;
 
-   /* MovieDto movieDto;*/
-
+    private Integer id;
+    private String name;
+    private Integer price;
 }
